@@ -1,10 +1,7 @@
 package fr.kangpvp.lastarria;
 
-import fr.kangpvp.lastarria.commands.CommandTest;
-import fr.kangpvp.lastarria.listeners.ListenersManager;
+import fr.kangpvp.lastarria.commands.CommandSpawn;
 import fr.kangpvp.lastarria.utils.ConfigManager;
-import org.bukkit.Bukkit;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
@@ -13,9 +10,7 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         System.out.println("Salut la famille good ou pas ?");
         System.out.println("Test BR5");
-
-        new ListenersManager(this).RegisterListeners();
-        Bukkit.getPluginCommand("test").setExecutor((CommandExecutor) new CommandTest());
+        getCommand("spawn").setExecutor(new CommandSpawn());
 
 
         //loadConfigManager;
