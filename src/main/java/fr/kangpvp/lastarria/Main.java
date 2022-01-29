@@ -12,7 +12,7 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         System.out.println("Salut la famille good ou pas ?");
-        System.out.println("Test BR5");
+        System.out.println("Test BRs5");
 
         new ListenersManager(this).RegisterListeners();
         Bukkit.getPluginCommand("test").setExecutor((CommandExecutor) new CommandTest());
