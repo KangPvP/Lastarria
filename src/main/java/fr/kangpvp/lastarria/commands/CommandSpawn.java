@@ -18,7 +18,6 @@ public class CommandSpawn implements CommandExecutor {
             player.sendMessage("§4Le PVP est désactivé");
             player.teleport(spawn);
         }
-
         return false;
     }
 }
