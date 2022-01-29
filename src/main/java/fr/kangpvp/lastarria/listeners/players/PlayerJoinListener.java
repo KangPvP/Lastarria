@@ -35,7 +35,7 @@ public class PlayerJoinListener implements Listener {
             {
                 Sign sign = (Sign) bs;
 
-                if(sign.getLine(0).equalsIgnoreCase("[Téléportation]") && sign.getLine(1).equalsIgnoreCase("Monde survie"))
+                if(sign.getLine(0).equalsIgnoreCase("[Téléportation]") && sign.getLine(2).equalsIgnoreCase("Monde survie"))
                 {
                     p.teleport((Location) Bukkit.getWorld("world"));
                     p.sendMessage("§bTu as été téléporté en monde survie");
