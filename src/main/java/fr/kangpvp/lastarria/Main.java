@@ -1,5 +1,6 @@
 package fr.kangpvp.lastarria;
 
+import fr.kangpvp.lastarria.utils.ConfigManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
@@ -9,7 +10,10 @@ public final class Main extends JavaPlugin {
     System.out.println("Salut la famille good ");
 
 
-        // Plugin startup logic
+        //loadConfigManager;
+        ConfigManager.getInstance().setup();
+        ConfigManager.getInstance().savePlayersData();
+        ConfigManager.getInstance().reloadPlayersData();
 
     }
 
