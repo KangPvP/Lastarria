@@ -5,7 +5,6 @@ import fr.kangpvp.lastarria.commands.Commandrtp;
 import fr.kangpvp.lastarria.commands.tp.CommandTpa;
 import fr.kangpvp.lastarria.listeners.ListenersManager;
 import fr.kangpvp.lastarria.utils.ConfigManager;
-import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -17,7 +16,6 @@ public final class Main extends JavaPlugin {
         System.out.println("Test BR5");
         getCommand("spawn").setExecutor(new CommandSpawn());
         getCommand("rtp").setExecutor(new Commandrtp());
-
         getCommand("tpa").setExecutor((CommandExecutor) new CommandTpa());
 
 
