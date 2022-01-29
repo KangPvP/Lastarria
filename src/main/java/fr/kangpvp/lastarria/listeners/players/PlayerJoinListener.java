@@ -17,8 +17,8 @@ public class PlayerJoinListener implements Listener {
     public void onJoin(PlayerJoinEvent e)
     {
         Player player = e.getPlayer();
-        Location spawn = new Location(Bukkit.getWorld("viking"), 119.700, 68, 202.252, 89.8f, 5.6f);
-        player.teleport(spawn);
+        Location base = new Location(Bukkit.getWorld("viking"), 119.700, 68, 202.252, 89.8f, 5.6f);
+        player.teleport(base);
 
     }
 
@@ -35,7 +35,7 @@ public class PlayerJoinListener implements Listener {
             {
                 Sign sign = (Sign) bs;
 
-                if(sign.getLine(0).equalsIgnoreCase("[Téléportation]") && sign.getLine(1).equalsIgnoreCase("Vers le le monde survie"))
+                if(sign.getLine(0).equalsIgnoreCase("[Téléportation]") && sign.getLine(1).equalsIgnoreCase("Monde survie"))
                 {
                     p.teleport((Location) Bukkit.getWorld("world"));
                     p.sendMessage("§bTu as été téléporté en monde survie");
