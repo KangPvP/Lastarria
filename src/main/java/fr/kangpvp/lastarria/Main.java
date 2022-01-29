@@ -7,7 +7,8 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-    System.out.println("Salut la famille good ou pas ?");
+        System.out.println("Salut la famille good ou pas ?");
+        System.out.println("Test BR5");
 
 
         //loadConfigManager;
