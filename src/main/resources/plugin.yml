@@ -6,4 +6,4 @@ authors: [ KangPvP et DraKyx ]
 description: yo la team
 commands:
   spawn:
-    permission: player and console
+  rtp:
