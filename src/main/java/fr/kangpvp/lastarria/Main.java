@@ -4,6 +4,8 @@ import fr.kangpvp.lastarria.commands.*;
 import fr.kangpvp.lastarria.commands.tp.CommandTpa;
 import fr.kangpvp.lastarria.commands.tp.CommandTpaccept;
 import fr.kangpvp.lastarria.commands.tp.CommandTpdenny;
+import fr.kangpvp.lastarria.listeners.BlockBreakListener;
+import fr.kangpvp.lastarria.listeners.CortexListeners;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -32,7 +34,10 @@ public final class Main extends JavaPlugin {
         getCommand("tpaccept").setExecutor((CommandExecutor)new CommandTpaccept(this));
         getCommand("tpdenny").setExecutor((CommandExecutor)new CommandTpdenny(this));
 
-        getServer().getPluginManager().registerEvents(new MainListener(this), this);
+        getServer().getPluginManager().registerEvents(new MainListener(), this);
+        getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
+        getServer().getPluginManager().registerEvents(new CortexListeners(), this);
+
 
     }
 
