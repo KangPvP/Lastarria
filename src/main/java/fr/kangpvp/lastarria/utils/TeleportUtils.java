@@ -33,7 +33,7 @@ public class TeleportUtils {
         if(isLocationSafe(randomLocation)){
             return randomLocation;
         }else{
-            Location dummy = new Location(Bukkit.getWorld("viking"), 119.700, 68, 202.252, 89.8f, 5.6f);
+            Location dummy = new Location(Bukkit.getWorld("viking"), -431.556, 117, 197.420, 90.9f, -1.0f);
             return dummy;
         }
     }
