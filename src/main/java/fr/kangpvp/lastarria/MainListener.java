@@ -19,7 +19,7 @@ public class MainListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        Location join = new Location(Bukkit.getWorld("viking"), -431.556, 117, 197.420, 90.9f, -1.0f);
+        Location join = new Location(Bukkit.getWorld("viking"), -431.556, 117, -197.420, 90.9f, -1.0f);
         player.teleport(join);
     }
 
