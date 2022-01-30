@@ -1,6 +1,8 @@
 package fr.kangpvp.lastarria;
 
 import fr.kangpvp.lastarria.commands.*;
+import fr.kangpvp.lastarria.listeners.BlockBreakListener;
+import fr.kangpvp.lastarria.listeners.CortexListeners;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -22,6 +24,8 @@ public final class Main extends JavaPlugin {
         getCommand("tpall").setExecutor(new CommandTpall());
 
         getServer().getPluginManager().registerEvents(new MainListener(this), this);
+        getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
+        getServer().getPluginManager().registerEvents(new CortexListeners(), this);
 
     }
 
