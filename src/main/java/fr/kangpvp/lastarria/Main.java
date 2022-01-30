@@ -41,7 +41,7 @@ public final class Main extends JavaPlugin {
 
         Bukkit.getPluginManager().registerEvents(new MainListener(), (Plugin)this);
         Bukkit.getPluginManager().registerEvents(new BlockBreakListener(), (Plugin)this);
-        Bukkit.getPluginManager().registerEvents(new CortexListeners(), (Plugin)this);
+        Bukkit.getPluginManager().registerEvents(new CortexListeners(), this);
 
         //loadConfigManager();
         ConfigManager.getInstance().setup();
