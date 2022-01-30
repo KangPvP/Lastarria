@@ -1,12 +1,14 @@
 package fr.kangpvp.lastarria;
 
-import fr.kangpvp.lastarria.commands.CommandSpawn;
-import fr.kangpvp.lastarria.commands.Commandec;
-import fr.kangpvp.lastarria.commands.Commandrtp;
-import org.bukkit.command.CommandExecutor;
+import fr.kangpvp.lastarria.commands.*;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.ArrayList;
+
 public final class Main extends JavaPlugin {
+
+    public ArrayList<Player> invisible_list = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -15,7 +17,11 @@ public final class Main extends JavaPlugin {
         getCommand("spawn").setExecutor(new CommandSpawn());
         getCommand("rtp").setExecutor(new Commandrtp());
         getCommand("ec").setExecutor(new Commandec());
-        getServer().getPluginManager().registerEvents(new MainListener(), this);
+        getCommand("fly").setExecutor(new CommandFly(this));
+        getCommand("vanish").setExecutor(new CommandVanish(this));
+        getCommand("tpall").setExecutor(new CommandTpall());
+
+        getServer().getPluginManager().registerEvents(new MainListener(this), this);
 
     }
 

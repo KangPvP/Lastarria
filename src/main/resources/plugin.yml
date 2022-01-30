@@ -7,4 +7,12 @@ description: yo la team
 commands:
   spawn:
   rtp:
+    permission: lastarria.use
   ec:
+    permission: lastarria.use
+  fly:
+    permission: lastarria.use
+  vanish:
+    permission: lastarria.use
+  tpall:
+    permission: lastarria.use

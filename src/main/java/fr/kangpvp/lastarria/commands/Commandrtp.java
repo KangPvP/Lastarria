@@ -19,7 +19,6 @@ public class Commandrtp implements CommandExecutor {
         if(sender instanceof Player){
             Player player = (Player) sender;
             player.teleport(TeleportUtils.generateLocation(player));
-            player.sendMessage("§aTu as bien été tp aléatoirement");
         }
 
         return false;
