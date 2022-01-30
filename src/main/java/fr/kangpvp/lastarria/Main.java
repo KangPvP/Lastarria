@@ -6,6 +6,7 @@ import fr.kangpvp.lastarria.commands.tp.CommandTpaccept;
 import fr.kangpvp.lastarria.commands.tp.CommandTpdenny;
 import fr.kangpvp.lastarria.listeners.BlockBreakListener;
 import fr.kangpvp.lastarria.listeners.CortexListeners;
+import fr.kangpvp.lastarria.utils.ConfigManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
@@ -39,6 +40,11 @@ public final class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new MainListener(), (Plugin)this);
         getServer().getPluginManager().registerEvents(new BlockBreakListener(), (Plugin)this);
         getServer().getPluginManager().registerEvents(new CortexListeners(), (Plugin)this);
+
+        //loadConfigManager();
+        ConfigManager.getInstance().setup();
+        ConfigManager.getInstance().savePlayersData();
+        ConfigManager.getInstance().reloadPlayersData();
 
 
     }
