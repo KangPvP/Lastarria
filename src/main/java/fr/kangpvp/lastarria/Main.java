@@ -19,6 +19,8 @@ import java.util.Map;
 
 public final class Main extends JavaPlugin {
 
+    public static Main INSTANCE;
+
     public ArrayList<Player> invisible_list = new ArrayList<>();
     public Map<Player, Player> tpa = new HashMap<Player, Player>();
 
