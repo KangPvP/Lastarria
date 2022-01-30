@@ -38,8 +38,8 @@ public final class Main extends JavaPlugin {
         getCommand("tpdenny").setExecutor((CommandExecutor)new CommandTpdenny(this));
 
         Bukkit.getPluginManager().registerEvents(new MainListener(), (Plugin)this);
-        getServer().getPluginManager().registerEvents(new BlockBreakListener(), (Plugin)this);
-        getServer().getPluginManager().registerEvents(new CortexListeners(), (Plugin)this);
+        Bukkit.getPluginManager().registerEvents(new BlockBreakListener(), (Plugin)this);
+        Bukkit.getPluginManager().registerEvents(new CortexListeners(), (Plugin)this);
 
         //loadConfigManager();
         ConfigManager.getInstance().setup();

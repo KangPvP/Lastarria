@@ -26,9 +26,10 @@ public class CortexListeners implements Listener {
         meta.setBlockState(css);
         spawner_to_give.setItemMeta(meta);
 
-        e.getBreaker().sendMessage(ChatColor.GRAY + "Tu as bien récupéré un spawner");
+        e.getBreaker().sendMessage(ChatColor.GRAY + "Tu as bien récupéré ton spawner");
         e.getBreaker().getInventory().addItem(spawner_to_give);
     }
 
 }
+
 

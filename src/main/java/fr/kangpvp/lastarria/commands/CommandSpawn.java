@@ -13,7 +13,7 @@ public class CommandSpawn implements CommandExecutor {
 
         if(sender instanceof Player){
             Player player = (Player) sender;
-            Location spawn = new Location(Bukkit.getWorld("viking"), 119.700, 68, 202.252, 89.8f, 5.6f);
+            Location spawn = new Location(Bukkit.getWorld("viking"), -431.556, 117, 197.420, 90.9f, -1.0f);
             player.sendMessage("§aTu as bien été téléporté au spawn");
             player.sendMessage("§4Le PVP est désactivé");
             player.teleport(spawn);

@@ -19,8 +19,9 @@ public class BlockBreakListener implements Listener {
             Bukkit.getServer().getPluginManager().callEvent(new SpawnerBreakEvent(e.getPlayer(), blockBroken));
         }else if(blockBroken.getType().equals(Material.SPAWNER) && e.getPlayer().getInventory().getItemInMainHand().containsEnchantment(Enchantment.SILK_TOUCH )&& !(e.getPlayer().hasPermission("cortexspawner.silk"))){
             //dont have perms to silk break
-            e.getPlayer().sendMessage(ChatColor.GRAY + "Tu es prêt à obtenir un spawner avec silk touch.");
+            e.getPlayer().sendMessage(ChatColor.GRAY + "Tu peux maintenant obtenir des spawners avec silk touch");
         }
     }
 
 }
+
