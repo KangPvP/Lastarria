@@ -1,16 +1,21 @@
 package fr.kangpvp.lastarria;
 
 import fr.kangpvp.lastarria.commands.*;
-import fr.kangpvp.lastarria.listeners.BlockBreakListener;
-import fr.kangpvp.lastarria.listeners.CortexListeners;
+import fr.kangpvp.lastarria.commands.tp.CommandTpa;
+import fr.kangpvp.lastarria.commands.tp.CommandTpaccept;
+import fr.kangpvp.lastarria.commands.tp.CommandTpdenny;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class Main extends JavaPlugin {
 
     public ArrayList<Player> invisible_list = new ArrayList<>();
+    public Map<Player, Player> tpa = new HashMap<Player, Player>();
 
     @Override
     public void onEnable() {
@@ -23,9 +28,11 @@ public final class Main extends JavaPlugin {
         getCommand("vanish").setExecutor(new CommandVanish(this));
         getCommand("tpall").setExecutor(new CommandTpall());
 
+        getCommand("tpa").setExecutor((CommandExecutor)new CommandTpa(this));
+        getCommand("tpaccept").setExecutor((CommandExecutor)new CommandTpaccept(this));
+        getCommand("tpdenny").setExecutor((CommandExecutor)new CommandTpdenny(this));
+
         getServer().getPluginManager().registerEvents(new MainListener(this), this);
-        getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
-        getServer().getPluginManager().registerEvents(new CortexListeners(), this);
 
     }
 
