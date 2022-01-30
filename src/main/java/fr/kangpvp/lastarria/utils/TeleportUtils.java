@@ -1,5 +1,6 @@
 package fr.kangpvp.lastarria.utils;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -24,7 +25,7 @@ public class TeleportUtils {
         int y = 300;
         int z = random.nextInt(20000);
 
-        Location randomLocation = new Location(player.getWorld(), x, y, z);
+        Location randomLocation = new Location(Bukkit.getWorld("world"), x, y, z);
 
         y = randomLocation.getWorld().getHighestBlockYAt(randomLocation);
         randomLocation.setY(y);
@@ -32,7 +33,7 @@ public class TeleportUtils {
         if(isLocationSafe(randomLocation)){
             return randomLocation;
         }else{
-            Location dummy = new Location(player.getWorld(), 119.700, 68, 202.252, 89.8f, 5.6f);
+            Location dummy = new Location(Bukkit.getWorld("viking"), 119.700, 68, 202.252, 89.8f, 5.6f);
             return dummy;
         }
     }

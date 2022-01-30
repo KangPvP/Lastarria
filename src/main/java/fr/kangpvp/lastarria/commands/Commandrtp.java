@@ -20,7 +20,6 @@ public class Commandrtp implements CommandExecutor {
             Player player = (Player) sender;
             player.teleport(TeleportUtils.generateLocation(player));
         }
-
         return false;
     }
 }
