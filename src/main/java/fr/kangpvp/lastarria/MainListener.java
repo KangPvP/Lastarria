@@ -12,16 +12,10 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 public class MainListener implements Listener {
-
-    @EventHandler
-    public void onJoin(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-        Location join = new Location(Bukkit.getWorld("viking"), -431.556, 117, -197.420, 90.9f, -1.0f);
-        player.teleport(join);
-    }
 
     @EventHandler
     public void onBreak(BlockBreakEvent event){

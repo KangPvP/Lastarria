@@ -34,6 +34,7 @@ public final class Main extends JavaPlugin {
         getCommand("fly").setExecutor(new CommandFly(this));
         getCommand("vanish").setExecutor(new CommandVanish(this));
         getCommand("tpall").setExecutor(new CommandTpall());
+        getCommand("survie").setExecutor(new CommandSurvie());
 
         getCommand("tpa").setExecutor((CommandExecutor)new CommandTpa(this));
         getCommand("tpaccept").setExecutor((CommandExecutor)new CommandTpaccept(this));

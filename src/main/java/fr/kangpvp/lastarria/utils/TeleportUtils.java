@@ -21,9 +21,9 @@ public class TeleportUtils {
 
         Random random = new Random();
 
-        int x = random.nextInt(20000);
+        int x = random.nextInt(2000);
         int y = 300;
-        int z = random.nextInt(20000);
+        int z = random.nextInt(2000);
 
         Location randomLocation = new Location(Bukkit.getWorld("world"), x, y, z);
 
